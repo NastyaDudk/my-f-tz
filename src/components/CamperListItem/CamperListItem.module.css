@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  height: 358px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  transition: box-shadow 0.15s ease-out;
+}
+
+.wrapper:hover,
+.wrapper:focus {
+  box-shadow: 9px 11px 23px -11px rgba(0, 0, 0, 0.18);
+}
+
+.wrapper.favorites {
+  width: 1118px;
+}
+
+.showMore {
+  position: absolute;
+  bottom: 22px;
+  left: 336px;
+  border: none;
+  padding: 16px 60px;
+  color: white;
+  border-radius: 200px;
+  background-color: var(--button);
+  transition: background-color 0.15s ease-in-out, box-shadow 0.25s ease-in-out;
+  cursor: pointer;
+}
+
+.showMore:hover,
+.showMore:focus {
+  background-color: var(--button-active);
+  box-shadow: 9px 11px 23px -11px rgba(0, 0, 0, 0.26);
+}
+.showMore:active {
+  transform: scale(0.975);
+}
+
+.showMore.favoritesShowMore {
+  left: 566px;
+}

@@ -1,0 +1,46 @@
+@keyframes move {
+  0% {
+    left: 55px;
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    left: 60px;
+    transform: translateY(2px) rotate(2deg) scale(1.01);
+  }
+  50% {
+    left: 65px;
+    transform: translateY(0px) rotate(4deg) scale(1.025);
+  }
+  75% {
+    left: 70px;
+    transform: translateY(2px) rotate(-2deg) scale(1.012);
+  }
+  100% {
+    left: 95px;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.logoText {
+  left: 55px;
+  color: var(--main-text);
+  position: relative;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.span {
+  color: var(--main);
+  font-weight: 700;
+  transition: color 0.15s ease-in-out;
+}
+
+.logoText:hover span,
+.logoText:focus span {
+  color: var(--button);
+}
+
+.logoText.moved {
+  animation: move 0.5s ease-out forwards;
+}

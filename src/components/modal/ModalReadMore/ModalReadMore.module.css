@@ -1,0 +1,47 @@
+.wrapper {
+  position: absolute;
+  top: -12.5vh;
+  left: -25vw;
+  z-index: 40;
+  background-color: rgba(17, 18, 19, 0.4);
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.textWrapper {
+  position: absolute;
+  background-color: white;
+  width: 35vw;
+  top: 15%;
+  left: 33%;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.description {
+  line-height: normal;
+  text-align: justify;
+}
+.title {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.buttonClose {
+  position: absolute;
+  right: 40px;
+  top: -40;
+  background-color: transparent;
+  border: none;
+}
+
+.buttonClose:hover .icon,
+.buttonClose:focus .icon {
+  stroke: var(--button);
+}
+
+.icon {
+  stroke: black;
+  transition: stroke 0.15 ease-in-out;
+}

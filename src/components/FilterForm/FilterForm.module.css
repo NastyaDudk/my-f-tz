@@ -1,0 +1,177 @@
+.formGroup {
+  position: relative;
+}
+
+.inputLabel {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--main);
+  opacity: 0.6;
+  margin-right: 100%;
+  margin-bottom: 8px;
+}
+
+.locatonInput {
+  width: 360px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--inputs);
+  padding: 18px;
+  padding-left: 48px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--main);
+  margin-bottom: 30px;
+}
+
+.iconPointer {
+  position: absolute;
+  left: 18px;
+  top: 54px;
+}
+
+.locatonInput::placeholder {
+  font-size: 20px;
+}
+.filters {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--main);
+  opacity: 0.6;
+  margin-right: 100%;
+  margin-bottom: 20px;
+}
+
+.headersWrapper {
+  display: flex;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerBlock {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.headerBlock1 {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.resetFilters {
+  display: inline-block;
+  font-weight: 500;
+  color: var(--button);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.resetFilters:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  color: var(--main-text);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-top: 1px solid var(--main);
+  opacity: 0.1;
+  top: 0;
+}
+
+.formGroup:not(:first-child) {
+  padding-top: 24px;
+}
+
+.checkBoxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 10px;
+}
+
+.checkBox {
+  display: none;
+}
+
+.checkBoxWrapper {
+  width: 114px;
+  height: 95px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1);
+  transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    transform 0.05s ease-in-out;
+  cursor: pointer;
+  text-align: center;
+  line-height: 0.98;
+  user-select: none;
+}
+
+.checkBoxWrapper.checked {
+  transform: scale(0.975);
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  box-shadow: inset -7px -7px 11px -9px rgba(0, 0, 0, 0.2);
+}
+
+.checkBoxWrapper:hover,
+.checkBoxWrapper:focus {
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  box-shadow: inset -7px -7px 11px -9px rgba(0, 0, 0, 0.2);
+}
+
+.checkBoxWrapper:active {
+  transform: scale(0.975);
+}
+
+.icon {
+  margin-bottom: 6px;
+  display: block;
+  stroke: black;
+  fill: white;
+}
+
+.checkBoxLabel {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.radioBoxLabel {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.submitButton {
+  border: none;
+  padding: 16px 60px;
+  color: white;
+  border-radius: 200px;
+  background-color: var(--button);
+  transition: background-color 0.15s ease-in-out, box-shadow 0.25s ease-in-out;
+  cursor: pointer;
+}
+.submitButton:hover,
+.submitButton:focus {
+  background-color: var(--button-active);
+  box-shadow: 9px 11px 23px -11px rgba(0, 0, 0, 0.26);
+}
+.submitButton:active {
+  transform: scale(0.975);
+}

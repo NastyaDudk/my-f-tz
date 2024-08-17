@@ -1,0 +1,34 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  height: 80px;
+  padding: 0 20px;
+}
+
+.logoContainer {
+  margin-right: auto;
+}
+
+.navBarContainer {
+  margin-right: 150px;
+}
+
+@media screen and (max-width: 1123px) {
+  .navBarContainer {
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    margin-left: 150px;
+    top: 100px; 
+
+  }
+
+  .logoContainer {
+    margin-left: 150px;
+    text-align: center;
+    justify-content: center;
+  }
+}
+

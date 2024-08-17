@@ -1,0 +1,105 @@
+.container {
+  height: 532px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(16, 24, 40, 0.2);
+  border-radius: 10px;
+  padding: 24px;
+  padding-bottom: 0;
+}
+
+.form {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.input {
+  width: 400px;
+  height: 56px;
+  padding: 18px;
+  border: none;
+  background-color: var(--inputs);
+  border-radius: 10px;
+}
+
+input[type="date"]:not(:focus)::-webkit-calendar-picker-indicator {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  transform: translateX(4px) translateY(-1px);
+  opacity: 1%;
+  z-index: 999;
+}
+
+input[type="date"]:focus::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 1%;
+}
+
+.dateButton {
+  position: absolute;
+  pointer-events: none;
+  right: 18px;
+  top: 158px;
+  opacity: 0.2;
+}
+
+input[type="date"]:focus + .dateButton {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.input:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.inputComent {
+  border: none;
+  background-color: var(--inputs);
+  border-radius: 10px;
+  width: 400px;
+  padding: 18px;
+  height: 114px;
+  margin-bottom: 24px;
+  resize: none;
+  outline: none;
+}
+
+.inputComent::placeholder {
+  position: absolute;
+  top: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.text {
+  display: block;
+  line-height: normal;
+  margin-bottom: 24px;
+}
+
+.submitButton {
+  padding: 16px 60px;
+  background-color: var(--button);
+  border-radius: 200px;
+  color: white;
+  font-weight: 400;
+}
+
+.submitButton:hover,
+.submitButton:focus {
+  background-color: var(--button-active);
+  box-shadow: 9px 11px 23px -11px rgba(0, 0, 0, 0.26);
+}
+.submitButton:active {
+  transform: scale(0.975);
+}
+
+.svg {
+  stroke: black;
+  fill: white;
+}

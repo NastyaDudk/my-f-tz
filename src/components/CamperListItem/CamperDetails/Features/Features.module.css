@@ -1,0 +1,45 @@
+.featureName::first-letter {
+  text-transform: uppercase;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 8px;
+  column-gap: 8px;
+  justify-content: flex-start;
+}
+
+.wrapperModal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 8px;
+  column-gap: 8px;
+  margin-bottom: 44px;
+}
+
+.svg {
+  margin-right: 8px;
+  fill: white;
+  stroke: black;
+}
+.svgGears,
+.svgForkKnife,
+.svgBad {
+  margin-right: 8px;
+  stroke: black;
+  fill: white;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  background-color: var(--block-features);
+  border-radius: 100px;
+}
+
+.item:last-child {
+  margin-right: auto;
+}

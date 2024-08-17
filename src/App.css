@@ -1,0 +1,16 @@
+@import "./reset.css";
+
+:root {
+  --button: #e44848;
+  --button-active: #d84343;
+  --main: #101828;
+  --inputs: #f7f7f7;
+  --block-features: #f2f4f7;
+  --rating: #ffc531;
+  --main-text: #475467;
+}
+
+html {
+  overflow-y: visible;
+  padding-right: 15px;
+}

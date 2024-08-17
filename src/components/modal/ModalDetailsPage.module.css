@@ -1,0 +1,202 @@
+.backdropWrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  background-color: rgba(17, 18, 19, 0.4);
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 982px;
+  height: 720px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.frame {
+  width: 922px;
+  height: 640px;
+  padding-right: 16px;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.details {
+  width: 100%;
+}
+
+.description {
+  display: block;
+  line-height: normal;
+  overflow-wrap: break-word;
+  width: 100%;
+  height: 66px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: justify;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.headerTwo {
+  width: 320px;
+  height: 38px;
+  display: inline-block;
+  font-size: 30px;
+  font-stretch: semi-condensed;
+  font-weight: 600;
+  margin-right: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.headerPrice {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.favoriteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.favoriteButton:hover .svg,
+.favoriteButton:focus .svg {
+  stroke: var(--button);
+}
+
+.favoriteButton:active {
+  transform: scale(0.92);
+}
+
+.svg {
+  fill: white;
+  stroke: var(--main);
+  transition: fill 0.15s ease-in-out, stroke 0.15s ease-in-out;
+}
+
+.favoriteButton.active .svg {
+  fill: var(--button);
+  stroke: var(--button);
+}
+
+.svgStar {
+  fill: var(--rating);
+  margin-right: 4px;
+}
+
+.svgPointer {
+  fill: black;
+  margin-right: 4px;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.reviewRank {
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  margin-right: 16px;
+}
+
+.imageList {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.imageItem {
+  width: 290px;
+  height: 310px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.imageItem:not(:last-child) {
+  margin-right: 16px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.readMoreBtn {
+  display: flex;
+  font-size: 16px;
+  color: var(--button);
+  text-decoration: underline;
+  margin-bottom: 24px;
+  margin-left: auto;
+}
+
+.buttonClose {
+  display: flex;
+  margin-left: auto;
+}
+
+.buttonClose:hover .icon,
+.buttonClose:focus .icon {
+  stroke: var(--button);
+}
+
+.icon {
+  stroke: black;
+  transition: stroke 0.15 ease-in-out;
+}
+.linkWrapper {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(16, 24, 40, 0.2);
+  margin-bottom: 44px;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.link:first-child {
+  margin-right: 40px;
+}
+
+.active::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  width: 100%;
+  height: 5px;
+  background-color: var(--button);
+}
+.featureBooking {
+  display: flex;
+}

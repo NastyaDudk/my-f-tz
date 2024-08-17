@@ -1,0 +1,93 @@
+.details {
+  width: 526px;
+  height: 310px;
+}
+
+.description {
+  display: block;
+  line-height: normal;
+  line-break: auto;
+  height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 24px;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.headerTwo {
+  width: 320px;
+  height: 38px;
+  display: inline-block;
+  font-size: 30px;
+  font-stretch: semi-condensed;
+  font-weight: 600;
+  margin-right: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.headerPrice {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+.favoriteButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+
+.favoriteButton:hover .svg,
+.favoriteButton:focus .svg {
+  stroke: var(--button);
+}
+
+.favoriteButton:active {
+  transform: scale(0.92);
+}
+
+.svg {
+  fill: white;
+  stroke: var(--main);
+  transition: fill 0.15s ease-in-out, stroke 0.15s ease-in-out;
+}
+
+.favoriteButton.active .svg {
+  fill: var(--button);
+  stroke: var(--button);
+}
+
+.svgStar {
+  fill: var(--rating);
+  margin-right: 4px;
+}
+
+.svgPointer {
+  fill: black;
+  margin-right: 4px;
+}
+
+.ratings {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.reviewRank {
+  display: flex;
+  align-items: center;
+  text-decoration: underline;
+  margin-right: 16px;
+}
