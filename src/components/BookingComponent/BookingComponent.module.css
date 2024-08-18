@@ -1,4 +1,5 @@
 .container {
+  width: 454px;
   height: 532px;
   display: flex;
   flex-direction: column;
@@ -15,7 +16,6 @@
 
 .input {
   width: 400px;
-  height: 56px;
   padding: 18px;
   border: none;
   background-color: var(--inputs);
@@ -40,7 +40,7 @@ input[type="date"]:focus::-webkit-calendar-picker-indicator {
   position: absolute;
   pointer-events: none;
   right: 18px;
-  top: 158px;
+  top: 145px;
   opacity: 0.2;
 }
 
@@ -60,7 +60,6 @@ input[type="date"]:focus + .dateButton {
   width: 400px;
   padding: 18px;
   height: 114px;
-  margin-bottom: 24px;
   resize: none;
   outline: none;
 }

@@ -2,5 +2,6 @@
   margin: 0 auto;
   padding: 100px 64px;
   display: flex;
+  max-width: 1400px;
   justify-content: space-between;
 }

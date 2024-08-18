@@ -1,23 +1,24 @@
-/* eslint-disable react/prop-types */
-import style from "./ModalDetailsPage.module.css";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
-import icons from "../../images/sprite.svg";
+import React, { useState, useEffect } from 'react';
+import style from './ModalDetailsPage.module.css';
 import { nanoid } from "nanoid";
-import { ModalReadMore } from "./ModalReadMore/ModalReadMore";
+import icons from "../../images/sprite.svg";
 import { CamperFeatures } from "../CamperFeatures/CamperFeatures";
 import { CamperReviews } from "../CamperReviews/CamperReviews";
 import { BookingComponent } from "../BookingComponent/BookingComponent";
-import { RemoveScroll } from "react-remove-scroll";
+import { Link } from "react-router-dom";
 
 export const ModalDetailsPage = ({ modalIsOpen, closeModal, camper }) => {
-  const [modalReadOpen, setModalReadOpen] = useState(false);
   const [isFeatures, setIsFeatures] = useState(true);
+  const [showFullText, setShowFullText] = useState(false);
 
   useEffect(() => {
     modalIsOpen
       ? document.addEventListener("keydown", handleKeyDown)
       : document.removeEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
   }, [modalIsOpen]);
 
   const handleKeyDown = (event) => {
@@ -31,22 +32,14 @@ export const ModalDetailsPage = ({ modalIsOpen, closeModal, camper }) => {
   };
 
   const handleReadMore = () => {
-    setModalReadOpen(!modalReadOpen);
+    setShowFullText(true);
   };
 
   return (
-    <div
-      className={style.backdropWrapper}
-      id="backdrop"
-      onClick={handleCloseModal}
-    >
+    <div className={style.backdropWrapper} id="backdrop" onClick={handleCloseModal}>
       <div className={style.main}>
         <div className={style.frame}>
-          <button
-            type="button"
-            className={style.buttonClose}
-            onClick={closeModal}
-          >
+          <button type="button" className={style.buttonClose} onClick={closeModal}>
             <svg className={style.icon} width="16" height="16">
               <use href={`${icons}#icon-Close`}></use>
             </svg>
@@ -65,8 +58,7 @@ export const ModalDetailsPage = ({ modalIsOpen, closeModal, camper }) => {
                     <Link to={`/reviews/#${camper._id}`}>
                       {camper.reviews.reduce((acc, review) => {
                         return acc + review.reviewer_rating;
-                      }, 0) / camper.reviews.length}
-                      ({camper.reviews.length} Reviews)
+                      }, 0) / camper.reviews.length} ({camper.reviews.length} Reviews)
                     </Link>
                   </>
                 ) : (
@@ -85,61 +77,37 @@ export const ModalDetailsPage = ({ modalIsOpen, closeModal, camper }) => {
               <ul className={style.imageList}>
                 {camper.gallery.map((url) => (
                   <li key={nanoid()} className={style.imageItem}>
-                    <img
-                      src={url}
-                      alt="Camper details"
-                      className={style.image}
-                    />
+                    <img src={url} alt="Camper details" className={style.image} />
                   </li>
                 ))}
               </ul>
             </div>
 
-            <p className={style.description}>{camper.description}</p>
+            <p className={style.description}>
+              {showFullText ? camper.description : `${camper.description.substring(0, 100)}...`}
+            </p>
 
-            <button
-              type="button"
-              onClick={handleReadMore}
-              className={style.readMoreBtn}
-            >
-              ...more
-            </button>
+            {!showFullText && (
+              <button type="button" onClick={handleReadMore} className={style.readMoreBtn}>
+                ...more
+              </button>
+            )}
+
             <div className={style.linkWrapper}>
-              <Link
-                onClick={() => setIsFeatures(true)}
-                className={
-                  isFeatures ? `${style.link} ${style.active}` : style.link
-                }
-              >
+              <Link onClick={() => setIsFeatures(true)} className={isFeatures ? `${style.link} ${style.active}` : style.link}>
                 <h4>Features</h4>
               </Link>
-              <Link
-                onClick={() => setIsFeatures(false)}
-                className={
-                  !isFeatures ? `${style.link} ${style.active}` : style.link
-                }
-              >
+              <Link onClick={() => setIsFeatures(false)} className={!isFeatures ? `${style.link} ${style.active}` : style.link}>
                 <h4>Reviews</h4>
               </Link>
             </div>
+  
             <div className={style.featureBooking}>
-              {isFeatures ? (
-                <>
-                  <CamperFeatures camper={camper} />
-                </>
-              ) : (
-                <CamperReviews camper={camper} />
-              )}
+              {isFeatures ? <CamperFeatures camper={camper} /> : <CamperReviews camper={camper} />}
               <BookingComponent />
             </div>
-            {modalReadOpen && (
-              <RemoveScroll>
-                <ModalReadMore camper={camper} onClose={handleReadMore} />
-              </RemoveScroll>
-            )}
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )};

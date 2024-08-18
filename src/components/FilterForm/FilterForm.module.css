@@ -3,13 +3,12 @@
 }
 
 .inputLabel {
-  display: block;
-  font-size: 24px;
   font-weight: 500;
-  color: var(--main);
-  opacity: 0.6;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
   margin-right: 100%;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .locatonInput {
@@ -28,18 +27,17 @@
 .iconPointer {
   position: absolute;
   left: 18px;
-  top: 54px;
+  top: 40px;
 }
 
 .locatonInput::placeholder {
   font-size: 20px;
 }
 .filters {
-  display: block;
-  font-size: 24px;
   font-weight: 500;
-  color: var(--main);
-  opacity: 0.6;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
   margin-right: 100%;
   margin-bottom: 20px;
 }

@@ -43,9 +43,6 @@ select {
   outline: none;
 }
 
-p {
-  line-height: 0;
-}
 
 input {
   border: none;

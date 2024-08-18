@@ -51,9 +51,11 @@
 }
 .headerBlock {
   margin-bottom: 24px;
+  margin-right: 24px;
 }
 
 .review {
+  margin-bottom: 24px;
   line-height: normal;
   display: inline-block;
   text-align: justify;

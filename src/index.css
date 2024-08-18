@@ -13,6 +13,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -23,13 +24,16 @@ a:hover {
 }
 
 body {
+  overflow: auto;
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  max-width: 100%;
 }
 
+html{
+  overflow: auto;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

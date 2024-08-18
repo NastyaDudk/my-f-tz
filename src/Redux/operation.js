@@ -5,7 +5,7 @@ export const fetchCamperList = createAsyncThunk(
   "getList",
   async (showedCamps, thunkAPI) => {
     try {
-      const response = await api("/camperlist");
+      const response = await api("/cars");
       response.campersCount = response.data.length;
 
       response.promoImages = response.data.map((camper) => {

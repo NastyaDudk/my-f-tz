@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import style from "./CamperDetails.module.css";
 import icons from "../../../images/sprite.svg";
 import { Features } from "./Features/Features";
@@ -11,6 +10,7 @@ import { Link } from "react-router-dom";
 export const CamperDetails = ({ camper }) => {
   const dispatch = useDispatch();
   const favoritesIDs = useSelector(selectFavoritesIDs);
+  
 
   useEffect(() => {
     if (!favoritesIDs.length) return;

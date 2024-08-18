@@ -290,7 +290,7 @@ export const FilterForm = () => {
               disabled={!(Object.entries(filters).length !== 0)}
             >
               {Object.entries(filters).length !== 0
-                ? "Reset filters?"
+                ? "Reset filters"
                 : "No active filters"}
             </button>
           </div>

@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   padding: 0;
-  margin: 0;
+  margin-bottom: 40px;
   overflow: hidden;
 }
 
@@ -16,8 +16,6 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 982px;
-  height: 720px;
   background-color: white;
   border-radius: 20px;
   padding: 40px;
@@ -36,17 +34,11 @@
 }
 
 .description {
-  display: block;
-  line-height: normal;
-  overflow-wrap: break-word;
-  width: 100%;
-  height: 66px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: justify;
+  margin-bottom: 44px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475467;
 }
 
 .titleWrapper {
@@ -57,8 +49,7 @@
 }
 
 .headerTwo {
-  width: 320px;
-  height: 38px;
+  height: 30px;
   display: inline-block;
   font-size: 30px;
   font-stretch: semi-condensed;
@@ -70,10 +61,11 @@
 }
 
 .headerPrice {
-  display: inline-block;
-  font-size: 30px;
   font-weight: 600;
-  margin-bottom: 24px;
+  font-size: 24px;
+  padding-bottom: 24px;
+  line-height: 1.25;
+  color: #101828;
 }
 
 .favoriteButton {
@@ -145,9 +137,9 @@
 
 .image {
   height: 100%;
-  width: 100%;
-  object-fit: cover;
+  max-width: 100%;
 }
+
 .readMoreBtn {
   display: flex;
   font-size: 16px;

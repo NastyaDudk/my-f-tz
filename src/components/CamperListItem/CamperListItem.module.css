@@ -1,13 +1,33 @@
 .wrapper {
-  position: relative;
-  height: 358px;
+  max-width: 888px;
+  padding: 24px;
   margin-bottom: 32px;
   border: 1px solid rgba(16, 24, 40, 0.2);
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   transition: box-shadow 0.15s ease-out;
 }
+
+.contentWrapper {
+  display: flex;
+}
+
+.showMore {
+  align-self: center;
+  border-radius: 200px;
+  padding: 16px 40px;
+  height: 56px;
+  background: #e44848;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: #fff;
+  cursor: pointer;
+}
+
 
 .wrapper:hover,
 .wrapper:focus {
@@ -18,23 +38,10 @@
   width: 1118px;
 }
 
-.showMore {
-  position: absolute;
-  bottom: 22px;
-  left: 336px;
-  border: none;
-  padding: 16px 60px;
-  color: white;
-  border-radius: 200px;
-  background-color: var(--button);
-  transition: background-color 0.15s ease-in-out, box-shadow 0.25s ease-in-out;
-  cursor: pointer;
-}
 
 .showMore:hover,
 .showMore:focus {
-  background-color: var(--button-active);
-  box-shadow: 9px 11px 23px -11px rgba(0, 0, 0, 0.26);
+  background: #d84343;
 }
 .showMore:active {
   transform: scale(0.975);
